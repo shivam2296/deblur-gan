@@ -9,9 +9,9 @@ To use it
 3) Run vidpatchipy.py.  This will patch the image into patches of size 512 X 512 and saves them in PATCHES.
 4) Run deblur_image.py. This will deblur the patches in PATCHES and stores the deblurred patches in deblurPATCHES.
 5) Run vidjoiner.py. This will join the patches to form the final image and saves it in DEBLUR_FRAMES.
-# ***
-The default patch size is 512 X 512. This can be changed easily by making changes in shaper.py, vidpatchipy.py and vidjoiner.py
 
+The default patch size is 512 X 512. This can be changed easily by making changes in shaper.py, vidpatchipy.py and vidjoiner.py
+# ***
 
 # What is this repo ?
 
