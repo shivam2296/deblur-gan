@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-join():
+def join():
 	img = 'FRAMES/frame1.jpg'
 	img = Image.open(img)
 	x, y = img.size
