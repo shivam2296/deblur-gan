@@ -50,9 +50,4 @@ python test.py
 ```
 
 Use `python test.py --help` for all options
-
-# Deblur your own image
-
-```
-python deblur_image.py --image_path=path/to/image
 ```
