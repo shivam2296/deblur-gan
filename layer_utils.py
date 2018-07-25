@@ -1,5 +1,5 @@
 import tensorflow as tf
-
+from shaper import getshape
 from keras.models import Model
 from keras.engine import InputSpec
 from keras.engine.topology import Layer
@@ -8,6 +8,7 @@ from keras.layers.merge import Add
 from keras.utils import conv_utils
 from keras.layers.core import Dropout
 
+shaper=getshape()
 
 def res_block(input, filters, kernel_size=(3, 3), strides=(1, 1), use_dropout=False):
     """
@@ -176,7 +177,9 @@ class ReflectionPadding2D(Layer):
 
 
 if __name__ == "__main__":
-    input = Input(shape=(256, 256, 3))
+
+#    input = Input(shape=(1024, 1024, 3))
+    input=Input(shaper)
     x = ReflectionPadding2D(3)(input)
     model = Model(input, x)
     model.summary()

@@ -1,9 +1,11 @@
 import os
 from PIL import Image
 import numpy as np
-
-
-RESHAPE = (256,256)
+#from options import parser
+from shaper import getshape
+#opt=parser.parse_args()
+dim = getshape()
+RESHAPE=(dim[0],dim[1])
 
 def is_an_image_file(filename):
     IMAGE_EXTENSIONS = ['.png', '.jpg', '.jpeg']
@@ -27,6 +29,7 @@ def preprocess_image(cv_img):
     cv_img = cv_img.resize(RESHAPE)
     img = np.array(cv_img)
     img = (img - 127.5) / 127.5
+    #print(img)
     return img
 
 

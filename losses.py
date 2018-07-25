@@ -1,9 +1,11 @@
 import keras.backend as K
 from keras.applications.vgg16 import VGG16
 from keras.models import Model
-
+from shaper import getshape
 # Note the image_shape must be multiple of patch_shape
-image_shape = (256, 256, 3)
+#opt=parser.parse_args()
+#shaper=(opt.x,opt.y,3)
+image_shape = getshape()
 
 
 def l1_loss(y_true, y_pred):
